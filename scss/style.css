@@ -1,63 +1,24 @@
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: grey;
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+body {
+  font-size: 16px;
+  margin: 0;
 }
 
-nav a {
+body ul {
+  list-style: none;
+  padding: 0;
+}
+
+body ul a {
   text-decoration: none;
 }
 
-nav ul {
-  padding: 0;
-  list-style: none;
-}
-
-nav .parent-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 5rem;
-  padding-bottom: .5rem;
-}
-
-nav .head-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav .child-nav {
-  display: none;
-  background-color: #fff;
-  border-radius: 1rem;
-}
-
-nav .parent-nav:hover .child-nav {
-  position: absolute;
-  margin-top: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+body ul li:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
-  .links {
+  nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -65,6 +26,318 @@ nav .parent-nav:hover .child-nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2.5em 2rem 0 2rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    z-index: 1000;
   }
+  nav .desktop-logo {
+    display: none;
+  }
+  nav ul li {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #1f3f5b;
+  }
+  nav .nav-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2em;
+  }
+  nav .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    background-color: #fff;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0.3rem 1.5rem 2rem 0.5rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0.3rem 1.5rem 2rem 0.5rem rgba(0, 0, 0, 0.25);
+  }
+  nav .head-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 6rem;
+  }
+  nav .head-item img {
+    padding-left: 1rem;
+  }
+  nav .head-item:first-child {
+    font-size: 1.1rem;
+  }
+  nav .head-item:first-child:hover {
+    -webkit-text-decoration: underline solid black;
+            text-decoration: underline solid black;
+  }
+  nav .sub-items {
+    padding: 1rem 4rem;
+    background-color: lightgrey;
+    border-radius: .25rem;
+  }
+  nav .sub-items a {
+    color: #888891;
+  }
+  nav .sub-items li {
+    margin: 1rem auto;
+  }
+  nav .sub-items li:hover {
+    font-weight: bold;
+  }
+  nav .links {
+    border-bottom: lightgray solid .1rem;
+    padding-bottom: 1rem;
+  }
+  nav .login {
+    margin: 2rem auto 0 auto;
+    padding: 0;
+  }
+  nav .login li {
+    margin: 0;
+    padding: 0;
+    max-height: 8rem;
+  }
+  nav button {
+    border-radius: 5rem;
+    border-style: none;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  }
+  /* Header section */
+  header {
+    display: -ms-grid;
+    display: grid;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+    background: linear-gradient(#ff8f70, #ff3d54);
+    text-align: center;
+    border-radius: 0 0 0 7rem;
+    font-family: 'Overpass', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: 8rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.4rem;
+  }
+  header .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header button {
+    border-radius: 5rem;
+    border-style: none;
+    height: 3.5rem;
+    width: 10.5rem;
+    margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+  }
+  header button:hover {
+    cursor: pointer;
+  }
+  header .learn-more-btn {
+    color: white;
+    background-color: transparent;
+    border: white solid 0.1rem;
+  }
+  header .learn-more-btn:hover {
+    color: #ff525d;
+    background-color: white;
+  }
+  header .start-btn {
+    color: #ff525d;
+  }
+  header .start-btn:hover {
+    color: white;
+    background-color: #ff525d;
+  }
+  header .intro-pic-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    overflow: hidden;
+  }
+  header .intro-pic-container .picture {
+    width: 90rem;
+    height: 90rem;
+    margin: -10.5rem -22.5rem -28rem;
+  }
+  header .hero {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    padding: 0 2rem;
+  }
+  main {
+    text-align: center;
+  }
+  main h2 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+  main p {
+    font-family: 'Overpass', sans-serif;
+    line-height: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+  }
+  main .future {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20rem;
+  }
+  main .infrastructure {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+    background: linear-gradient(#2c2d3f, #3f4164);
+    border-radius: 0 7rem 0 7rem;
+    margin-bottom: 4rem;
+  }
+  main .infrastructure .phones {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    width: 28rem;
+    height: 28rem;
+    margin: -13rem auto -1rem auto;
+    z-index: 100;
+  }
+  main .infrastructure .background-circle {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    overflow: hidden;
+    border-radius: 0 7rem 0 7rem;
+  }
+  main .infrastructure .circle {
+    width: 45rem;
+    height: 45rem;
+    margin: -18.5rem -10rem;
+  }
+  main .infrastructure .text {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    color: white;
+  }
+  main .infrastructure .text h2 {
+    font-size: 2.7rem;
+    margin-bottom: 0;
+  }
+  main .infrastructure .text p {
+    line-height: 2rem;
+    color: #c8c8cb;
+    margin-bottom: 6rem;
+  }
+  main .laptop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 6rem;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #25252d;
+    border-radius: 0 7rem 0 0;
+    text-align: center;
+    padding: 4rem 0;
+    line-height: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  footer a {
+    color: #c8c8cb;
+  }
+  footer .heading {
+    font-weight: bold;
+    margin: 1rem 0;
+    color: white;
+  }
+  footer .foot-section {
+    margin-bottom: 2rem;
+  }
+}
+
+/*Javascript toggles*/
+nav .hidden {
+  display: none;
+}
+
+.up {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 /*# sourceMappingURL=style.css.map */
