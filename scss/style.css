@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 body {
   font-size: 16px;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 95rem;
 }
 
 body ul {
@@ -15,6 +16,375 @@ body ul a {
 
 body ul li:hover {
   cursor: pointer;
+}
+
+body h2 {
+  color: #1f3f5b;
+}
+
+body p {
+  color: #4b5862;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  border-radius: 0 0 0 7rem;
+  overflow: hidden;
+  max-width: 95rem;
+  position: relative;
+}
+
+header .hero {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  font-family: 'Overpass', sans-serif;
+}
+
+header .hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+header .hero p {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+header .hero button {
+  border-radius: 5rem;
+  border-style: none;
+  height: 3rem;
+  width: 9.5rem;
+  margin: 2rem .5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+header .hero .start-btn {
+  color: #ff525d;
+  background: #fff;
+}
+
+header .hero .start-btn:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
+header .hero .learn-more-btn {
+  color: white;
+  background-color: transparent;
+  border: white solid 0.1rem;
+}
+
+header .hero .learn-more-btn:hover {
+  color: #ff525d;
+  background-color: white;
+}
+
+header .intro-pic-container {
+  width: 100%;
+  max-width: 100vw;
+}
+
+header .intro-pic {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  margin: -115rem -103.4375rem -75rem -28rem;
+}
+
+nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 10rem;
+  max-width: 80rem;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .links .logo {
+  padding-right: 2rem;
+}
+
+nav .links .head-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2rem;
+}
+
+nav .links .head-item .dark-arrow {
+  display: none;
+}
+
+nav .links .head-item img {
+  padding-left: 1rem;
+  color: white;
+}
+
+nav .links .sub-items {
+  position: absolute;
+  margin-top: 1rem;
+  padding: 2rem 3rem 2rem 2rem;
+  background-color: #fff;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0.3rem 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0.3rem 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+nav .login a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 2rem;
+}
+
+nav .login button {
+  border-radius: 5rem;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ff525d;
+  background: #fff;
+}
+
+nav .login button:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
+main {
+  font-family: 'Overpass', sans-serif;
+}
+
+main p {
+  line-height: 2rem;
+}
+
+main .future {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+main .future .head {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 2.3rem;
+}
+
+main .future .text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  margin-left: 10rem;
+  margin-top: -1.5rem;
+}
+
+main .future .text p {
+  margin-bottom: 5rem;
+}
+
+main .future img {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  margin: 5rem -18rem  0 5rem;
+}
+
+main .infrastructure {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background: linear-gradient(#2c2d3f, #3f4164);
+  border-radius: 0 7rem 0 7rem;
+  color: #fff;
+  max-height: 26rem;
+  margin-bottom: 10rem;
+}
+
+main .infrastructure .phones {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  z-index: 100;
+  margin: -4rem 0rem -4rem 7rem;
+}
+
+main .infrastructure .text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: auto;
+  padding-right: 12rem;
+}
+
+main .infrastructure .text h2 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+main .infrastructure .text p {
+  color: #fff;
+}
+
+main .infrastructure .background-circle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  overflow: hidden;
+}
+
+main .infrastructure .circle {
+  margin: -30rem -13.4rem;
+}
+
+main .laptop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+main .laptop img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 0 -17.2rem;
+}
+
+main .laptop .text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: auto;
+  padding-right: 12rem;
+}
+
+main .laptop .text p {
+  margin-bottom: 3rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3rem 20rem 3rem 10rem;
+  background-color: #25252d;
+  color: #c8c8cb;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 0 7rem 0 0;
+}
+
+footer ul {
+  margin-top: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #c8c8cb;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .heading {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+footer li {
+  line-height: 2rem;
 }
 
 @media (max-width: 900px) {

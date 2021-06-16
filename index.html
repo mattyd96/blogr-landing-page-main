@@ -19,62 +19,59 @@
 <body>
   <header>
     <nav>
-      <ul class="nav-icons mobile">
-        <li><img src="images/logo.svg" alt=""></li>
-        <li onclick="hamburgerToggle('navigation')"><img src="images/icon-hamburger.svg" alt="" class="hamburger"></li>
-      </ul>
-      <ul class="navigation hidden">   
-        <ul class="links">
-          <li><img src="images/logo.svg" alt="" class="desktop-logo"></li>
-          <!-- Product -->
-          <ul class="nested-nav">
-            <ul class="head-item" onclick="toggleSub('product', 'product-icon')">
-              <li>Product</li>
-              <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon"></li>
-            </ul>
-            <ul class="sub-items product hidden">
-              <li><a href="">Overview</a></li>
-              <li><a href="">Pricing</a></li>
-              <li><a href="">Marketplace</a></li>
-              <li><a href="">Features</a></li>
-              <li><a href="">Integrations</a></li>
-            </ul>
-          </ul> 
-          <!-- Company -->  
-          <ul class="nested-nav">
-            <ul class="head-item" onclick="toggleSub('company', 'company-icon')">
-              <li>Company</li>
-              <li><img src="images/icon-arrow-dark.svg" alt="" class="company-icon"></li>
-            </ul>
-            <ul class="sub-items company hidden">
-              <li><a href="">About</a></li>
-              <li><a href="">Team</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Careers</a></li>
-            </ul>
+      <ul class="links">
+        <img src="images/logo.svg" alt="" class="logo">
+        <!-- Product -->
+        <ul class="nested-nav">
+          <ul class="head-item" onclick="toggleSub('product', 'product-icon')">
+            <li>Product</li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
           </ul>
-          <!-- Connect -->   
-          <ul class="nested-nav">
-            <ul class="head-item" onclick="toggleSub('connect', 'connect-icon')">
-              <li>Connect</li>
-              <li><img src="images/icon-arrow-dark.svg" alt="" class="connect-icon"></li>
-            </ul>
-            <ul class="sub-items connect hidden">
-              <li><a href="">Contact</a></li>
-              <li><a href="">Newsletter</a></li>
-              <li><a href="">LinkedIn</a></li>
-            </ul>
-          </ul>   
+          <ul class="sub-items product hidden">
+            <li><a href="">Overview</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Marketplace</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Integrations</a></li>
+          </ul>
+        </ul> 
+        <!-- Company -->  
+        <ul class="nested-nav">
+          <ul class="head-item" onclick="toggleSub('company', 'company-icon')">
+            <li>Company</li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
+          </ul>
+          <ul class="sub-items company hidden">
+            <li><a href="">About</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
         </ul>
-        <!-- Login -->
-        <ul class="login">
-          <li><a href="">Login</a></li>
-          <li><button>Sign Up</button></li>
-        </ul>
-      </ul> 
+        <!-- Connect -->   
+        <ul class="nested-nav">
+          <ul class="head-item" onclick="toggleSub('connect', 'connect-icon')">
+            <li>Connect</li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
+          </ul>
+          <ul class="sub-items connect hidden">
+            <li><a href="">Contact</a></li>
+            <li><a href="">Newsletter</a></li>
+            <li><a href="">LinkedIn</a></li>
+          </ul>
+        </ul>   
+      </ul>
+      
+      <div class="login">
+        <a href="#">Login</a>
+        <button>Sign Up</button>
+      </div> 
     </nav>
     <div class="intro-pic-container">
-      <img src="images/bg-pattern-intro-mobile.svg" alt="" class="picture">
+      <img src="images/bg-pattern-intro.svg" alt="" class="intro-pic">
     </div>
     <section class="hero">
       <h1 class="title">A modern publishing platform</h1>
@@ -85,18 +82,21 @@
       </div>
     </section>
   </header>
+
   <main>
     <section class="future">
-      <h2>Designed for the future</h2>
-      <img src="images/illustration-editor-mobile.svg" alt="">
-      <h2>Introducing an extensible editor</h2>
-      <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-        The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-        videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-        change the looks of a blog.</p>
-      <h2>Robust content management</h2>
-      <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+      <h2 class="head">Designed for the future</h2>
+      <img src="images/illustration-editor-mobile.svg" alt="" srcset=" images/illustration-editor-desktop.svg">
+      <div class="text">
+        <h2>Introducing an extensible editor</h2>
+        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.</p>
+        <h2>Robust content management</h2>
+        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+      </div>
     </section>
     <section class="infrastructure">
       <img src="images/illustration-phones.svg" alt="" class="phones">
@@ -110,47 +110,45 @@
       </div>
     </section>
     <section class="laptop">
-      <img src="images/illustration-laptop-mobile.svg" alt="">
-      <h2>Free, open, simple</h2>
-      <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-      <h2>Powerful tooling</h2>
-      <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-        capable of producing even the most complicated sites.</p>
+      <img src="images/illustration-laptop-mobile.svg" alt="" srcset="images/illustration-laptop-desktop.svg">
+      <div class="text">
+        <h2>Free, open, simple</h2>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+        <h2>Powerful tooling</h2>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.</p>
+      </div> 
     </section>
   </main>
   <footer>
-    <ul class="footer-logo">
-      <li><img src="images/logo.svg" alt=""></li>
+    <img src="images/logo.svg" alt="">
+    <ul class="foot-section">
+      <li class="heading">Product</li>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Marketplace</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Integrations</a></li>
+      </ul>
     </ul>
-    <ul>
-      <ul class="foot-section">
-        <li class="heading">Product</li>
-        <ul>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Integrations</a></li>
-        </ul>
+    <ul class="foot-section">
+      <li class="heading">Company</li>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
       </ul>
-      <ul class="foot-section">
-        <li class="heading">Company</li>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </ul>
-      <ul class="foot-section">
-        <li class="heading">Connect</li>
-        <ul>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
+    </ul>
+    <ul class="foot-section">
+      <li class="heading">Connect</li>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">LinkedIn</a></li>
       </ul>
     </ul>
   </footer>
