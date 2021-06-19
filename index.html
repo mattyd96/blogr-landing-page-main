@@ -19,14 +19,18 @@
 <body>
   <header>
     <nav>
+      <div class="nav-icons">
+        <img src="images/logo.svg" alt="" class="logo-mobile">
+        <img src="images/icon-hamburger.svg" alt="" class="hamburger" onclick="hamburgerToggle()">
+      </div>
       <ul class="links">
         <img src="images/logo.svg" alt="" class="logo">
         <!-- Product -->
         <ul class="nested-nav">
           <ul class="head-item" onclick="toggleSub('product', 'product-icon')">
             <li>Product</li>
-            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
-            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow arrow"></li>
           </ul>
           <ul class="sub-items product hidden">
             <li><a href="">Overview</a></li>
@@ -39,9 +43,9 @@
         <!-- Company -->  
         <ul class="nested-nav">
           <ul class="head-item" onclick="toggleSub('company', 'company-icon')">
-            <li>Company</li>
-            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
-            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
+            <li class="heading">Company</li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="company-icon dark-arrow arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="company-icon light-arrow arrow"></li>
           </ul>
           <ul class="sub-items company hidden">
             <li><a href="">About</a></li>
@@ -54,17 +58,22 @@
         <ul class="nested-nav">
           <ul class="head-item" onclick="toggleSub('connect', 'connect-icon')">
             <li>Connect</li>
-            <li><img src="images/icon-arrow-dark.svg" alt="" class="product-icon dark-arrow"></li>
-            <li><img src="images/icon-arrow-light.svg" alt="" class="product-icon light-arrow"></li>
+            <li><img src="images/icon-arrow-dark.svg" alt="" class="connect-icon dark-arrow arrow"></li>
+            <li><img src="images/icon-arrow-light.svg" alt="" class="connect-icon light-arrow arrow"></li>
           </ul>
           <ul class="sub-items connect hidden">
             <li><a href="">Contact</a></li>
             <li><a href="">Newsletter</a></li>
             <li><a href="">LinkedIn</a></li>
           </ul>
-        </ul>   
+        </ul>
+        <!-- mobile login--> 
+        <div class="login-mobile">
+          <a href="#">Login</a>
+          <button>Sign Up</button>
+        </div>  
       </ul>
-      
+      <!-- Desktop login -->
       <div class="login">
         <a href="#">Login</a>
         <button>Sign Up</button>
@@ -86,7 +95,16 @@
   <main>
     <section class="future">
       <h2 class="head">Designed for the future</h2>
-      <img src="images/illustration-editor-mobile.svg" alt="" srcset=" images/illustration-editor-desktop.svg">
+      <picture>
+        <source media="(max-width: 1200px)" srcset="images/illustration-editor-mobile.svg">
+        <img src="images/illustration-editor-desktop.svg" alt="editor desktop page">
+      </picture>
+      <!-- <img 
+        srcset="images/illustration-editor-mobile.svg 406w, 
+                images/illustration-editor-desktop.svg 925w"
+        sizes="(max-width: 1200px) 406px, 925px"
+        src="images/illustration-editor-mobile.svg"
+        alt="editor desktop page"> -->
       <div class="text">
         <h2>Introducing an extensible editor</h2>
         <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
@@ -110,7 +128,16 @@
       </div>
     </section>
     <section class="laptop">
-      <img src="images/illustration-laptop-mobile.svg" alt="" srcset="images/illustration-laptop-desktop.svg">
+      <picture>
+        <source media="(max-width: 1200px)" srcset="images/illustration-laptop-mobile.svg">
+        <img src="images/illustration-laptop-desktop.svg" alt="editor desktop page">
+      </picture>
+      <!-- <img
+      srcset="images/illustration-laptop-mobile.svg 498w, 
+              images/illustration-laptop-desktop.svg 974w"
+      sizes="(max-width: 1200px) 498px, 974px" 
+        src="images/illustration-laptop-mobile.svg" 
+        alt="laptop"> -->
       <div class="text">
         <h2>Free, open, simple</h2>
         <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
