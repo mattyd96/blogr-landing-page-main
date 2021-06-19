@@ -345,7 +345,7 @@ main .laptop {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   margin-bottom: 5rem;
-  max-width: 150rem;
+  margin: auto;
 }
 
 main .laptop picture {
@@ -355,7 +355,12 @@ main .laptop picture {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  margin: 0 -17.2rem;
+}
+
+@media (max-width: 1600px) {
+  main .laptop picture {
+    margin: 0 -17.2rem;
+  }
 }
 
 main .laptop .text {
@@ -385,7 +390,6 @@ footer {
           align-items: flex-start;
   padding: 3rem 20rem 3rem 10rem;
   background-color: #25252d;
-  color: #c8c8cb;
   font-family: 'Ubuntu', sans-serif;
   border-radius: 0 7rem 0 0;
 }
@@ -406,6 +410,7 @@ footer a:hover {
 footer .heading {
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 footer li {
@@ -413,6 +418,66 @@ footer li {
 }
 
 @media (max-width: 1200px) {
+  /* Header section */
+  header {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+    background: linear-gradient(#ff8f70, #ff3d54);
+    text-align: center;
+    font-family: 'Overpass', sans-serif;
+    margin-bottom: 8rem;
+  }
+  header .hero {
+    margin-bottom: 8rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    padding: 0 2rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header button {
+    border-radius: 5rem;
+    border-style: none;
+    height: 3.5rem;
+    width: 9.5rem;
+    margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+  }
+  header button:hover {
+    cursor: pointer;
+  }
+  header .intro-pic-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    overflow: hidden;
+  }
+  header .intro-pic-container .intro-pic {
+    width: 90rem;
+    height: 90rem;
+    margin: -10.5rem -22.5rem -28rem;
+  }
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -422,13 +487,6 @@ footer li {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 2.5em 2rem 0 2rem;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-    z-index: 1000;
   }
   nav .logo {
     display: none;
@@ -458,13 +516,15 @@ footer li {
             box-shadow: 0.3rem 1.5rem 2rem 0.5rem rgba(0, 0, 0, 0.25);
     width: 100%;
   }
+  nav .links ul li {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: #1f3f5b;
+  }
   nav .links .nested-nav {
     width: 100%;
   }
   nav .links .head-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     padding: 1rem 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -479,10 +539,6 @@ footer li {
   }
   nav .links .head-item .light-arrow {
     display: none;
-  }
-  nav .links .head-item img {
-    padding-left: 1rem;
-    color: white;
   }
   nav .links .sub-items {
     position: static;
@@ -520,6 +576,7 @@ footer li {
   }
   nav .links .login-mobile a {
     margin: 1.5rem auto;
+    color: #1f3f5b;
   }
   nav .links .login-mobile button {
     margin-bottom: 2.5rem;
@@ -537,97 +594,6 @@ footer li {
   nav .login {
     display: none;
   }
-  nav ul li {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    color: #1f3f5b;
-  }
-  /* Header section */
-  header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-    background: linear-gradient(#ff8f70, #ff3d54);
-    text-align: center;
-    border-radius: 0 0 0 7rem;
-    font-family: 'Overpass', sans-serif;
-    color: #fff;
-    overflow: hidden;
-    margin-bottom: 8rem;
-  }
-  header .hero {
-    margin-bottom: 8rem;
-  }
-  header h1 {
-    font-size: 2.5rem;
-  }
-  header p {
-    font-size: 1.4rem;
-  }
-  header .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  header button {
-    border-radius: 5rem;
-    border-style: none;
-    height: 3.5rem;
-    width: 10.5rem;
-    margin-top: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-bottom: 5rem;
-  }
-  header button:hover {
-    cursor: pointer;
-  }
-  header .learn-more-btn {
-    color: white;
-    background-color: transparent;
-    border: white solid 0.1rem;
-  }
-  header .learn-more-btn:hover {
-    color: #ff525d;
-    background-color: white;
-  }
-  header .start-btn {
-    color: #ff525d;
-  }
-  header .start-btn:hover {
-    color: white;
-    background-color: #ff525d;
-  }
-  header .intro-pic-container {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
-    overflow: hidden;
-  }
-  header .intro-pic-container .intro-pic {
-    width: 90rem;
-    height: 90rem;
-    margin: -10.5rem -22.5rem -28rem;
-  }
-  header .hero {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    padding: 0 2rem;
-  }
   main {
     text-align: center;
     display: -webkit-box;
@@ -639,13 +605,11 @@ footer li {
             flex-direction: column;
   }
   main h2 {
-    font-family: 'Overpass', sans-serif;
     font-weight: 600;
     font-size: 2rem;
     padding: 0 2rem;
   }
   main p {
-    font-family: 'Overpass', sans-serif;
     line-height: 2rem;
     padding: 0 2rem;
     margin-bottom: 4rem;
@@ -659,11 +623,10 @@ footer li {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 20rem;
+    overflow: hidden;
   }
   main .future .head {
-    text-align: center;
     margin-top: 0rem;
-    font-size: 2.3rem;
   }
   main .future .text {
     margin: 0;
@@ -676,44 +639,17 @@ footer li {
     margin: 0 auto;
   }
   main .infrastructure {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 1.5fr 2.5fr;
         grid-template-rows: 1.5fr 2.5fr;
-    background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
-    background: linear-gradient(#2c2d3f, #3f4164);
-    border-radius: 0 7rem 0 7rem;
     margin-bottom: 4rem;
     max-height: none;
   }
   main .infrastructure .phones {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
     width: 28rem;
     height: 28rem;
     margin: -13rem auto -13rem auto;
-    z-index: 100;
-  }
-  main .infrastructure .background-circle {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    overflow: hidden;
-    border-radius: 0 7rem 0 7rem;
-  }
-  main .infrastructure .circle {
-    width: 45rem;
-    height: 45rem;
-    margin: -18.5rem -10rem;
   }
   main .infrastructure .text {
     -ms-grid-row: 2;
@@ -731,9 +667,23 @@ footer li {
     margin-bottom: 0;
   }
   main .infrastructure .text p {
-    line-height: 2rem;
     color: #c8c8cb;
     margin-bottom: 6rem;
+  }
+  main .infrastructure .background-circle {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    overflow: hidden;
+    border-radius: 0 7rem 0 7rem;
+  }
+  main .infrastructure .circle {
+    width: 45rem;
+    height: 45rem;
+    margin: -18.5rem -10rem;
   }
   main .laptop {
     display: -webkit-box;
@@ -744,14 +694,12 @@ footer li {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 6rem;
+    overflow: hidden;
   }
   main .laptop .text {
     padding: 0;
   }
   footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -759,20 +707,12 @@ footer li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #25252d;
-    border-radius: 0 7rem 0 0;
     text-align: center;
     padding: 4rem 0;
     line-height: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-  }
-  footer a {
-    color: #c8c8cb;
   }
   footer .heading {
-    font-weight: bold;
     margin: 1rem 0;
-    color: white;
   }
   footer .foot-section {
     margin-bottom: 2rem;
